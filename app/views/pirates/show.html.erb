@@ -1,6 +1,11 @@
 <p>
   <b>Catchphrase:</b>
   <%=h @pirate.catchphrase %>
+  <% unless @pirate.ship.nil? %>
+    <br />
+    <b>Ship</b>
+    <%= h @pirate.ship.name %>
+  <% end %>
 </p>
 
 
