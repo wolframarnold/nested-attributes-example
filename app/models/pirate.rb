@@ -4,4 +4,5 @@ class Pirate < ActiveRecord::Base
 
   validates_presence_of :catchphrase
 
+  accepts_nested_attributes_for :ship 
 end
