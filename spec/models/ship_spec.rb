@@ -10,4 +10,9 @@ describe Ship do
   it "should create a new instance given valid attributes" do
     Ship.create!(@valid_attributes)
   end
+
+  it 'should response to pirate' do
+    s = Ship.create!(@valid_attributes)
+    s.should respond_to(:pirate)
+  end
 end
