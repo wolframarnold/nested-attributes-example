@@ -3,7 +3,8 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe Ship do
   before(:each) do
     @valid_attributes = {
-      :name => "value for name"
+      :name => "value for name",
+      :pirate => Pirate.create!(:catchphrase => "yozo")
     }
   end
 
