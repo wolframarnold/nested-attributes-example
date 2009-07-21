@@ -9,7 +9,7 @@
   </p>
   <h2>... with new ship</h2>
   <p>
-    <% f.fields_for :ship do |s| %>
+    <% fields_for 'pirate[ship_attributes]', @pirate.ship do |s| %>
       <%= s.label :name %>
       <%= s.text_field :name %>
     <% end %>

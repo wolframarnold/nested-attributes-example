@@ -21,9 +21,8 @@ describe "/pirates/new.html.erb" do
 
   it 'renders new ship form' do
     render
-    p response.body
     response.should have_tag("form[action=?][method=post]", pirates_path) do
-      with_tag("input[name=?]", "pirate[ship][name]")
+      with_tag("input[name=?]", "pirate[ship_attributes][name]")
     end
   end
 end
