@@ -6,7 +6,8 @@ describe "/pirates/new.html.erb" do
   before(:each) do
     assigns[:pirate] = stub_model(Pirate,
       :new_record? => true,
-      :catchphrase => "value for catchphrase"
+      :catchphrase => nil,
+      :ship => nil
     )
   end
 
@@ -15,6 +16,13 @@ describe "/pirates/new.html.erb" do
     
     response.should have_tag("form[action=?][method=post]", pirates_path) do
       with_tag("input#pirate_catchphrase[name=?]", "pirate[catchphrase]")
+    end
+  end
+
+  it 'renders new ship form' do
+    render
+    response.should have_tag("form[action=?][method=post]", pirates_path) do
+      with_tag("input[name=?]", "pirate[ship_attributes][name]")
     end
   end
 end
