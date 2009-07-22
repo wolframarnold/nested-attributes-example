@@ -3,3 +3,10 @@ Nested Attribute Example
 
 Example project to illustrate the nested_attributes_for feature of Rails 2.3
 
+Based on a presentation by Wolfram Arnold given to the East Bay Ruby Meetup on 7/21/2009 in Berkeley, CA.
+
+Presentation slides: http://www.slideshare.net/wolframarnold/2009-07-21-nested-attributes
+
+(c) 2009, Wolfram Arnold, WTA Consulting, Inc.
+
+www.rubyfocus.biz, wolfram@rubyfocus.biz
