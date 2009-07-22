@@ -7,6 +7,13 @@
     <%= f.label :catchphrase %><br />
     <%= f.text_field :catchphrase %>
   </p>
+  <h3>Ship:</h3>
+  <p>
+    <% f.fields_for :ship_attributes do |s| %>
+      <%= s.label :name %>
+      <%= s.text_field :name %>
+    <% end %> 
+  </p>
   <p>
     <%= f.submit 'Create' %>
   </p>
